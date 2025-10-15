@@ -1,20 +1,25 @@
 {
-  "name": "@nichoth/preact-htm-signals-standalone",
+  "name": "spa-one-file",
   "version": "0.1.0",
-  "description": "A single, standalone version of Preact, HTM and Preact Signals. No external dependencies, just one single file.",
   "type": "module",
-  "main": "dist/standalone.umd.js",
+  "description": "A single, standalone version of Preact, HTM and Preact Signals. No external dependencies, just one single file.",
+  "files": ["dist/*"],
   "module": "dist/standalone.js",
   "umd:main": "dist/standalone.umd.js",
+  "main": "dist/standalone.umd.js",
   "scripts": {
     "postversion": "git push && git push --tags && npm publish",
+    "prepublishOnly": "npm run bundle",
     "bundle": "microbundle index.js -o ./dist/standalone.js -f es,umd --no-sourcemap --target web"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mujahidfa/preact-htm-signals-standalone.git"
+  "dependencies": {
+    "@preact/signals": "^1.2.2",
+    "htm": "3.1.1",
+    "microbundle": "^0.15.1",
+    "preact": "^10.19.3"
   },
-  "homepage": "https://github.com/mujahidfa/preact-htm-signals-standalone",
+  "devDependencies": {
+  },
   "keywords": [
     "preact signals",
     "signals",
@@ -39,10 +44,14 @@
     "virtual dom",
     "hyperscript"
   ],
-  "devDependencies": {
-    "@preact/signals": "^1.2.2",
-    "htm": "3.1.1",
-    "microbundle": "^0.15.1",
-    "preact": "^10.19.3"
-  }
+  "homepage": "https://github.com/nichoth/preact-htm-signals-standalone",
+  "bugs": {
+    "url": "https://github.com/nichoth/preact-htm-signals-standalone/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nichoth/preact-htm-signals-standalone.git"
+  },
+  "author": "nichoth <nichoth@nichoth.com> (https://nichoth.com)",
+  "license": "MIT"
 }
