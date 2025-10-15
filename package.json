@@ -1,9 +1,11 @@
 {
   "name": "spa-one-file",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
   "description": "A single, standalone version of Preact, HTM and Preact Signals. No external dependencies, just one single file.",
-  "files": ["dist/*"],
+  "files": [
+    "dist/*"
+  ],
   "module": "dist/standalone.js",
   "umd:main": "dist/standalone.umd.js",
   "main": "dist/standalone.umd.js",
@@ -18,8 +20,7 @@
     "microbundle": "^0.15.1",
     "preact": "^10.19.3"
   },
-  "devDependencies": {
-  },
+  "devDependencies": {},
   "keywords": [
     "preact signals",
     "signals",
